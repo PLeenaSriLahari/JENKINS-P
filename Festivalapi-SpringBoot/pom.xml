@@ -14,6 +14,7 @@
 	<packaging>war</packaging>
 	<name>Festivalapi-SpringBoot</name>
 	<description>Demo project for Spring Boot</description>
+	<packaging>war</packaging>
 	<url/>
 	<licenses>
 		<license/>
@@ -64,6 +65,7 @@
 	</dependencies>
 
 	<build>
+	<finalName>springbootfestivalapi</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

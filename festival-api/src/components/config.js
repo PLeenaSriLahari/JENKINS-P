@@ -1,6 +1,5 @@
-// config.js
 const config = {
-  url: "http://localhost:1212"
-};
+    url: "http://localhost:2030/springbootfestivalapi"
+}
 
 export default config;
