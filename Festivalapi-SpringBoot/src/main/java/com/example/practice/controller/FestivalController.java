@@ -13,7 +13,7 @@ import com.example.practice.service.FestivalService;
 
 
 @RestController
-@RequestMapping("/festivalapi")
+@RequestMapping("/festivalapi/")
 @CrossOrigin(origins = "*")
 public class FestivalController {
 
