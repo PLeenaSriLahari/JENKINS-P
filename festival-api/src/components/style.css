@@ -154,6 +154,18 @@ pre {
   overflow-x: auto;
   max-width: 100%;
   border: 1px solid #ffcc80;
+  color: #e65100; /* orange shade for fetched festival */
+}
+
+/* --- Festival fetch heading & section --- */
+#get-festival-section h4 {
+  color: #ff9800;
+  margin-top: 15px;
+}
+
+#get-festival-section pre {
+  color: #ff9800;
+  border-color: #ffb74d;
 }
 
 /* --- Responsive --- */
