@@ -1,24 +1,80 @@
-/* --- Button container --- */
-.btn-group, .action-buttons {
-  display: flex;
-  gap: 10px;           /* spacing between buttons */
-  flex-wrap: wrap;     /* wrap on smaller screens */
-  justify-content: center; /* center buttons horizontally */
-  margin-top: 10px;    /* spacing from form or table */
+/* ====== General Layout ====== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
 }
 
-/* --- Buttons --- */
+.student-container,
+.mall-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: #d0e4f7; /* bluish shade */
+  padding: 25px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+h3 {
+  margin-top: 30px;
+  color: #34495e;
+}
+
+h4 {
+  color: #2d3436;
+}
+
+/* ====== Form Styling ====== */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #bfc9ca;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #2980b9;
+}
+
+/* ====== Button Container (merged) ====== */
+.btn-group,
+.action-buttons {
+  display: flex;
+  gap: 10px;               /* spacing between buttons */
+  flex-wrap: wrap;         /* wrap on smaller screens */
+  justify-content: center; /* center buttons horizontally */
+  margin-top: 10px;        /* spacing from form or table */
+}
+
+/* ====== Buttons (merged new styles) ====== */
 button {
-  padding: 8px 16px;   /* more consistent padding */
+  padding: 8px 16px;       /* more consistent padding */
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
   font-size: 14px;
-  transition: 0.2s ease;
+  transition: 0.2s ease, transform 0.2s ease;
 }
 
-/* --- Specific button colors --- */
 .btn-orange { background-color: #ff9800; color: #fff; }
 .btn-green  { background-color: #4caf50; color: #fff; }
 .btn-red    { background-color: #f44336; color: #fff; }
@@ -29,10 +85,72 @@ button:hover {
   transform: translateY(-1px);
 }
 
-/* --- For responsive alignment --- */
+/* ====== Table Styling ====== */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #2980b9;
+  color: white;
+  text-transform: capitalize;
+}
+
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* ====== Message Banner ====== */
+.message-banner {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.message-banner.success {
+  background-color: #d4efdf;
+  color: #1e8449;
+  border: 1px solid #1e8449;
+}
+
+.message-banner.error {
+  background-color: #fadbd8;
+  color: #922b21;
+  border: 1px solid #922b21;
+}
+
+/* ====== Responsive Design ====== */
 @media (max-width: 600px) {
-  .btn-group, .action-buttons {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-group,
+  .action-buttons {
     flex-direction: column;
     align-items: stretch; /* buttons take full width on mobile */
+  }
+
+  button {
+    width: 100%;
   }
 }
