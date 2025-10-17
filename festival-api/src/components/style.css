@@ -85,7 +85,7 @@ button {
   transition: 0.2s ease;
 }
 
-/* Button colors */
+/* --- Button colors --- */
 .btn-orange {
   background-color: #ff9800;
   color: white;
@@ -106,9 +106,10 @@ button {
   color: white;
 }
 
+/* Make previous blue buttons orange */
 .btn-blue {
-  background-color: #2196f3;
-  color: white;
+  background-color: #ff9800; /* orange */
+  color: white;              /* text white */
 }
 
 button:hover {
